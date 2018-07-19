@@ -1,0 +1,160 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/_nile/pen/vXWXmJ?limit=all&page=38&q=food" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<style class="cp-pen-styles">@import 'https://fonts.googleapis.com/css?family=Raleway';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'raleway' sans-serif;
+}
+
+.portfollio .head {
+  background: #fafafa;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.portfollio .head span {
+  display: inline-block;
+  margin: 0 20px;
+  padding:30px 0;
+  cursor: pointer;
+  color: #999;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  transition: all 0.5s ease
+}
+
+.active,
+.portfollio .head span:hover {
+  /*border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: #000*/
+}
+
+.active {
+  color: #000 !important
+}
+
+.photo .tab {
+  margin: 20px 0;
+  position: relative
+}
+
+.photo .tab img {
+  height: 300px;
+}
+
+.photo .tab h2 {
+  position: absolute;
+  bottom: -9px;
+  width: 93.5%;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: all 0.5s ease;
+  cursor: pointer
+}
+
+.photo .tab:hover h2 {
+ /* height: 100%;
+  line-height: 300px;
+  background: rgba(0, 0, 0, 0.8);*/
+}</style></head><body>
+<div class="container">
+  <div class="row">
+    <div class="portfollio col-md-12">
+      <div class="head">
+        <span>all</span>
+        <span>Travel</span>
+        <span>Wedding</span>
+        <span>Product</span>
+      </div>
+    </div>
+    <div class="photo">
+
+      <div class="tab col-md-4">
+        <img src="images/gallery/travel/gurgaon.jpg" alt="" width="100%">
+        <h2>Travel</h2>
+      </div>
+
+      <div class="tab col-md-4">
+        <img src="images/gallery/travel/jaipur.jpg" alt="" width="100%">
+        <h2>Travel</h2>
+      </div>
+
+      <div class="tab col-md-4">
+        <img src="images/offer/product.jpg" alt="" width="100%">
+        <h2>Product</h2>
+      </div>
+
+      <div class="tab col-md-4">
+        <img src="images/gallery/travel/fashion.jpg" alt="" width="100%">
+        <h2>Travel</h2>
+      </div>
+
+      <div class="tab col-md-4">
+        <img src="images/offer/wed.jpg" alt="" width="100%">
+        <h2>Wedding</h2>
+      </div>
+
+      <div class="tab col-md-4">
+        <img src="https://thumbs.dreamstime.com/x/vector-set-restaurant-logo-design-templates-eco-food-fast-food-sushi-pizza-icons-fish-sea-food-company-insignia-coffee-63882793.jpg" alt="" width="100%">
+        <h2>Product</h2>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script >$(document).ready(function() {
+  
+  $('span:contains("all")').addClass('active');
+  
+  $('span:contains("all")').click(function() {
+  $('span:not(:contains("all"))').removeClass('active');
+    $(this).addClass('active');
+    $('.tab').show(500)
+  });
+
+  $('span:contains("Travel")').click(function() {
+    $('span:not(:contains("Travel"))').removeClass('active');
+    $(this).addClass('active');
+    $('.tab:contains("Travel")').show(500);
+    $('.tab:not(:contains("Travel"))').hide(500);
+
+  });
+
+  $('span:contains("Wedding")').click(function() {
+    $('span:not(:contains("Wedding"))').removeClass('active');
+    $(this).addClass('active');
+    $('.tab:contains("Wedding")').show(500);
+    $('.tab:not(:contains("Wedding"))').hide(500);
+  });
+
+  $('span:contains("Product")').click(function() {
+    $('span:not(:contains("Product"))').removeClass('active');
+    $(this).addClass('active');
+    $('.tab:contains("Product")').show(500);
+    $('.tab:not(:contains("Product"))').hide(500);
+  });
+
+});
+
+</script>
+</body></html>
